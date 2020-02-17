@@ -7,14 +7,17 @@ public class HealthController : MonoBehaviour, IDamageable
     [SerializeField] private HealthData healthData;
     private Health _currentHealth;
 
-    private void Awake()
-    {
-        _currentHealth = new Health();
-        _currentHealth.Value = healthData.Health.Value;
-    }
-
     private void Start()
     {
+        ResetHealth();
+    }
+
+    public void ResetHealth()
+    {
+        if (_currentHealth == null)
+            _currentHealth = new Health();
+
+        _currentHealth.Value = healthData.Health.Value;
         UpdateHealth();
     }
 
@@ -30,6 +33,4 @@ public class HealthController : MonoBehaviour, IDamageable
         if (_currentHealth.Value <= 0)
             onDeath?.Raise(_currentHealth);
     }
-    // Так, у нас на астероиде и на корабле висят HealthControllers, и астероид и корабль должны иметь CollisionDetector, который будет получать компонент
-    // IDamageable при ударе и вызывать 
 }

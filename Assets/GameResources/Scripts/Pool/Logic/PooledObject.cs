@@ -2,7 +2,7 @@
 
 public class PooledObject : MonoBehaviour
 {
-    public void ReturnToPool()
+    public void Push()
     {
         gameObject.SetActive(false);
     }

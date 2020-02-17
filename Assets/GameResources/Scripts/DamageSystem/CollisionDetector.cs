@@ -2,13 +2,13 @@
 
 public class CollisionDetector : MonoBehaviour
 {
+    [SerializeField] private CollisionHandler[] handlers;
+
     private void OnTriggerEnter(Collider other)
     {
-        var hit = other.gameObject.GetComponent<IDamageable>();
-        if (hit != null)
+        foreach (var item in handlers)
         {
-            hit.TakeDamage(1);
-            Debug.Log($"{hit} is hit");
+            item.ExecuteOnCollision(other, gameObject);
         }
     }
 }

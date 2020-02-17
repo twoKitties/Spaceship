@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8592693232046257561}
   - component: {fileID: 8592693232046257558}
   - component: {fileID: 8592693232046257563}
+  - component: {fileID: 4664262092905661815}
   m_Layer: 9
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -166,3 +167,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missilePoolData: {fileID: 11400000, guid: f339850906bff514db48666670cf73c2, type: 2}
+--- !u!114 &4664262092905661815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8592693232046257552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2c992fbe134de4abff757c323c1a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerHealth: {fileID: 8592693232046257555}
+  _playerInput: {fileID: 8592693232046257558}

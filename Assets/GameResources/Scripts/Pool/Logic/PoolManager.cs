@@ -25,4 +25,9 @@ public class PoolManager : MonoBehaviour
     private Pool GetPool(PoolData data) => _pools.Find(item => item.Name == data.PoolName);
 
     public GameObject GetObject(PoolData data) => GetPool(data).GetObject().gameObject;
+
+    public PooledObject[] GetAllObjects(PoolData data)
+    {
+        return GetPool(data).GetAll();
+    }
 }

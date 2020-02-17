@@ -24,7 +24,7 @@ public class Pool
     private void AddObject()
     {
         var pooledObject = Object.Instantiate(_prefab);
-        pooledObject.ReturnToPool();
+        pooledObject.Push();
         _objects.Add(pooledObject);
     }
 
@@ -41,4 +41,6 @@ public class Pool
         AddObject();
         return _objects[_objects.Count - 1];
     }
+
+    public PooledObject[] GetAll() => _objects.ToArray();
 }

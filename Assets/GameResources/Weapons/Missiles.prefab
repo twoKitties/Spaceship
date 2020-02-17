@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2026923195333102899}
   - component: {fileID: 561097874221386436}
   - component: {fileID: 2146586039289903631}
+  - component: {fileID: 4938210572105018778}
   m_Layer: 8
   m_Name: Missiles
   m_TagString: Untagged
@@ -136,8 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  lifeTime: 2
-  pooledObject: {fileID: 4531682955272597411}
 --- !u!114 &2146586039289903631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,5 +147,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8b8669ed4a240b49a4bfff00a077abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handlers:
+  - {fileID: 11400000, guid: 7e45b9d8dcac8604dbfd650a80514b5c, type: 2}
+  - {fileID: 11400000, guid: f173863a7c314b746a61e731816f68e6, type: 2}
+--- !u!114 &4938210572105018778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318012186929309100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bbafa01ff88e4458c41e8faaf133bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
